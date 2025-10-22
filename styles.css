@@ -2,29 +2,22 @@ html {
     scroll-behavior: smooth;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background: #000 url(wallpaper.jpg) center / cover;
     background-attachment: fixed;
+    line-height: 1.6;
 }
 
-.logo {
-    font-size: 4vh;
-    font-weight: 700;
-    color: white;
-    text-decoration: none;
-}
-
-.logo span {
-    color: aqua;
-    margin-left: 3vh;
-}
-
+/* Navigation */
 nav {
-    margin-top: 20px;
+    margin-top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,132 +25,178 @@ nav {
     width: 100%;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
     z-index: 1000;
-    padding: 0 20px;
-    box-sizing: border-box;
+    padding: 1rem 5%;
+    transition: all 0.3s ease;
+}
+
+.logo {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: aqua;
+    margin-left: 0.5rem;
 }
 
 .link {
     display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .link-1 a {
     text-decoration: none;
     text-transform: uppercase;
     color: white;
-    margin-right: 30px;
-    font-size: 2.5vh;
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
     font-weight: 700;
+    transition: color 0.3s ease;
 }
 
 .link-1 a:hover {
     color: red;
 }
 
-.home {
-    padding: 150px 80px 80px;
+/* Sections General */
+section {
+    padding: clamp(4rem, 10vw, 8rem) clamp(2rem, 8vw, 6rem);
+    text-align: center;
 }
 
-.home h1 {
+section h1 {
     color: red;
     text-transform: uppercase;
-    text-align: start;
-    font-size: 4vh;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Home Section */
+.home {
+    padding-top: 120px; /* Account for fixed nav */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-body {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    gap: 3rem;
     border-radius: 30px;
-    padding: 80px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: clamp(2rem, 8vw, 6rem);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .home-body img {
     max-width: 300px;
-    height: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: auto;
     border-radius: 50%;
     border: 5px solid red;
-    margin-right: 100px;
+    object-fit: cover;
 }
 
 .home-text {
-    margin-left: 5vh;
+    text-align: center;
+    flex: 1;
 }
 
 .home-text h2 {
-    font-size: 4vh;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: red;
     text-transform: capitalize;
+    margin-bottom: 1rem;
 }
 
 .home-text h3 {
-    font-size: 3vh;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
     color: white;
-    margin-top: 30px;
+    margin-bottom: 1.5rem;
 }
 
 .home-text p {
-    font-size: 2vh;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: white;
-    margin-top: 30px;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .my-social {
-    margin-top: 3vh;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .my-social a {
     color: red;
     background-color: white;
-    font-size: 3vh;
-    padding: 12px;
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    padding: 1rem;
     border-radius: 50%;
-    margin-right: 10px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    transition: all 0.3s ease;
 }
 
 .my-social a:hover {
     color: white;
     background-color: #ffb500;
+    transform: translateY(-5px);
 }
 
-.about {
-    padding: 80px;
-}
-
-.about h1 {
-    color: red;
-    text-transform: uppercase;
-    text-align: start;
-    font-size: 4vh;
-}
-
+/* About Section */
 .about-body {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
     align-items: center;
+    gap: 3rem;
     text-align: center;
-    padding: 30px;
+    padding: clamp(2rem, 8vw, 4rem);
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-body img {
-    height: 400px;
+    max-width: 100%;
+    max-height: 400px;
+    height: auto;
     border-radius: 30px;
     border: 5px solid red;
+    object-fit: cover;
 }
 
 .about-text {
-    text-align: center;
-    max-width: 50%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .about-text h2 {
-    font-size: 4vh;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
     color: red;
     text-transform: capitalize;
     animation: hazel 2s ease-in-out infinite;
@@ -165,230 +204,224 @@ nav {
 }
 
 @keyframes hazel {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-22px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-22px); }
+    100% { transform: translateY(0); }
 }
 
 .about-text p {
-    font-size: 2vh;
+    font-size: clamp(1rem, 3vw, 1.2rem);
     color: white;
     text-transform: capitalize;
+    margin-top: 1.5rem;
 }
 
-.skills {
-    padding: 80px;
-}
-
-.skills h1 {
-    color: red;
-    text-transform: uppercase;
-    text-align: start;
-    font-size: 5vh;
-}
-
+/* Skills Section */
 .skill-body {
-    padding: 50px;
-    background: rgba(0, 0, 0, 0.5);
+    padding: clamp(2rem, 8vw, 4rem);
+    background: rgba(0, 0, 0, 0.7);
     border-radius: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill-body h2 {
     color: white;
     text-align: center;
     text-transform: uppercase;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 3rem;
 }
 
 table {
-    margin-top: 50px;
     width: 100%;
     border: 5px solid red;
     border-collapse: collapse;
     text-align: center;
+    margin-top: 2rem;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 th, td {
-    padding: 30px;
+    padding: clamp(1rem, 3vw, 1.5rem);
     color: white;
     text-transform: uppercase;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+}
+
+th {
+    background: rgba(255, 0, 0, 0.2);
 }
 
 th i {
     color: red;
-    font-size: 4vh;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 
-.project {
-    padding: 80px;
-}
-
-.project h1 {
-    color: red;
-    text-transform: uppercase;
-    text-align: start;
-    font-size: 4vh;
-}
-
+/* Project Section */
 .project-body {
-    padding: 30px;
+    padding: clamp(2rem, 8vw, 4rem);
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.activity {
-    display: flex;
-    justify-content: space-around;
-    padding: 100px;
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-body h2 {
     color: red;
     text-transform: uppercase;
     text-align: center;
-    font-size: 3vh;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 3rem;
+}
+
+.activity {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: clamp(2rem, 5vw, 4rem);
 }
 
 .activity-1 {
     background-color: white;
-    padding: 12px;
-    transition: background-color 0.3s;
+    padding: 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .activity-1:hover {
     background-color: red;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(255, 0, 0, 0.3);
 }
 
 .activity img {
+    width: 100%;
     height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
 }
 
 .activity h3 {
     color: black;
     text-transform: uppercase;
-    text-align: center;
+    font-size: clamp(1rem, 3vw, 1.2rem);
 }
 
-.testi {
-    padding: 80px;
-}
-
-.testi h1 {
-    color: red;
-    text-transform: uppercase;
-    text-align: start;
-    font-size: 4vh;
-}
-
+/* Testimonial Section */
 .testi-body {
-    padding: 30px;
+    padding: clamp(2rem, 8vw, 4rem);
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .testi-body h2 {
     color: red;
     text-transform: uppercase;
     text-align: center;
-    font-size: 3vh;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 3rem;
 }
 
 .commentors {
-    margin-left: 25%;
-    margin-right: 25%;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .people-1 {
     display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
     background-color: white;
-    padding: 20px;
-    border-radius: 30px;
-    margin-bottom: 20px;
+    padding: 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
 }
 
 .people-1:hover {
     border: 3px solid red;
+    transform: translateY(-5px);
 }
 
 .people-1 img {
-    height: 100px;
-    width: 100px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
 .comments {
-    margin-left: 2vh;
+    flex: 1;
 }
 
 .people-1 h3 {
     text-transform: capitalize;
     color: red;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
 }
 
 .people-1 p {
     color: black;
     text-transform: capitalize;
+    margin: 0;
+    font-size: 1rem;
 }
 
-.cta {
-    padding: 80px;
-}
-
-.cta h1 {
-    color: red;
-    text-transform: uppercase;
-    text-align: start;
-    font-size: 4vh;
-}
-
+/* CTA Section */
 .cta-body {
-    padding: 30px;
+    padding: clamp(2rem, 8vw, 4rem);
     border-radius: 30px;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cta-footer {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    text-align: center;
 }
 
 .cta-body h2 {
     color: white;
     background-color: red;
-    max-width: 30%;
-    padding: 20px;
+    padding: clamp(1rem, 4vw, 1.5rem) clamp(2rem, 6vw, 3rem);
     border-radius: 100px;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .cta-text p {
     color: white;
-    font-size: 2vh;
-    margin-left: 20px;
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* Footer */
 .footer-1 {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    gap: 1rem;
     color: white;
-}
-
-.footer-1 a {
-    color: pink;
-    font-size: 4vh;
-}
-
-.footer-1 p {
-    margin-left: 10px;
+    text-align: center;
+    padding: 3rem 2rem;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .logo-2 {
-    font-size: 5vh;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
     font-weight: 700;
     color: white;
     text-decoration: none;
@@ -396,7 +429,7 @@ th i {
 
 .logo-2 span {
     color: aqua;
-    margin-left: 3vh;
+    margin-left: 0.5rem;
 }
 
 .copy-right p {
@@ -404,41 +437,59 @@ th i {
     color: white;
     text-align: center;
     text-transform: capitalize;
-    padding: 8px;
+    padding: 1rem;
+    margin: 0;
+    width: 100%;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
 }
 
-
-@media screen and (max-width: 768px) {
-    .home-body, .about-body, .activity, .cta-footer {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .home-body img, .about-body img {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-    
-    .commentors {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .about-text {
-        max-width: 100%;
-    }
-
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
     nav {
-        flex-direction: column;
-    }
-
-    .link-1 {
-        display: flex;
+        padding: 1rem 3%;
         flex-wrap: wrap;
-        justify-content: center;
     }
+    
+    .link {
+        gap: 1rem;
+    }
+    
+    .home-body,
+    .about-body,
+    .people-1 {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    
+    .activity {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-footer {
+        flex-direction: column !important;
+    }
+    
+    table {
+        font-size: 0.9rem;
+    }
+    
+    th, td {
+        padding: 0.8rem 0.5rem;
+    }
+}
 
-    .link-1 a {
-        margin: 10px;
+@media (max-width: 480px) {
+    section {
+        padding: 3rem 1.5rem;
+    }
+    
+    .home {
+        padding-top: 100px;
+    }
+    
+    .my-social a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.1rem;
     }
 }
