@@ -1,250 +1,444 @@
 html {
-  scroll-behavior: smooth;
-}
-
-* {
-  box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #000 url(wallpaper.jpg) center / cover no-repeat fixed;
-  color: white;
-}
-
-/* ======== NAVBAR ======== */
-nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 40px;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
-  transition: all 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #000 url(wallpaper.jpg) center / cover;
+    background-attachment: fixed;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: 700;
-  color: white;
-  text-decoration: none;
+    font-size: 4vh;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
 }
 
 .logo span {
-  color: aqua;
+    color: aqua;
+    margin-left: 3vh;
 }
 
-/* Navigation Links */
+nav {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
 .link {
-  display: flex;
-  gap: 20px;
+    display: flex;
 }
 
 .link-1 a {
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: 0.3s;
-  text-transform: uppercase;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    margin-right: 30px;
+    font-size: 2.5vh;
+    font-weight: 700;
 }
 
 .link-1 a:hover {
-  color: red;
+    color: red;
 }
 
-/* ======== HOME SECTION ======== */
 .home {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 140px 20px 60px;
-  text-align: center;
-}
-
-.home img {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 5px solid red;
-  object-fit: cover;
-  margin-bottom: 20px;
+    padding: 150px 80px 80px;
 }
 
 .home h1 {
-  color: red;
-  font-size: 3.5vh;
-  margin-bottom: 10px;
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 4vh;
 }
 
-.home h2 {
-  font-size: 2.5vh;
-  color: white;
-  margin-bottom: 20px;
+.home-body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 30px;
+    padding: 80px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-.home button {
-  background: red;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  font-size: 2vh;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
+.home-body img {
+    max-width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid red;
+    margin-right: 100px;
 }
 
-.home button:hover {
-  background: #ffb500;
-  color: black;
+.home-text {
+    margin-left: 5vh;
 }
 
-/* ======== ABOUT SECTION ======== */
+.home-text h2 {
+    font-size: 4vh;
+    color: red;
+    text-transform: capitalize;
+}
+
+.home-text h3 {
+    font-size: 3vh;
+    color: white;
+    margin-top: 30px;
+}
+
+.home-text p {
+    font-size: 2vh;
+    color: white;
+    margin-top: 30px;
+}
+
+.my-social {
+    margin-top: 3vh;
+    padding: 20px;
+}
+
+.my-social a {
+    color: red;
+    background-color: white;
+    font-size: 3vh;
+    padding: 12px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.my-social a:hover {
+    color: white;
+    background-color: #ffb500;
+}
+
 .about {
-  padding: 80px 20px;
-  text-align: center;
+    padding: 80px;
 }
 
 .about h1 {
-  color: red;
-  font-size: 4vh;
-  text-transform: uppercase;
-  margin-bottom: 30px;
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 4vh;
 }
 
 .about-body {
-  max-width: 900px;
-  margin: 0 auto;
-  background: rgba(0, 0, 0, 0.6);
-  border-radius: 25px;
-  padding: 40px;
-}
-
-.about-body p {
-  line-height: 1.6;
-  font-size: 2.3vh;
-  color: white;
-}
-
-/* ======== FOOTER ======== */
-.copy-right p {
-  background-color: red;
-  color: white;
-  text-align: center;
-  text-transform: capitalize;
-  padding: 10px;
-  font-size: 2vh;
-}
-
-/* ======== RESPONSIVENESS ======== */
-
-/* Tablets */
-@media (max-width: 1024px) {
-  nav {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px 20px;
-  }
-
-  .link {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .home img {
-    width: 160px;
-    height: 160px;
-  }
-
-  .home h1 {
-    font-size: 3vh;
-  }
-
-  .home h2 {
-    font-size: 2.2vh;
-  }
-}
-
-/* Mobile Phones */
-@media (max-width: 768px) {
-  nav {
-    flex-direction: column;
-    padding: 10px;
-  }
-
-  .logo {
-    font-size: 3vh;
-  }
-
-  .link {
-    flex-direction: column;
-    gap: 5px;
+    display: flex;
+    justify-content: space-around;
     align-items: center;
-  }
-
-  .home {
-    padding-top: 120px;
-  }
-
-  .home img {
-    width: 140px;
-    height: 140px;
-  }
-
-  .home h1 {
-    font-size: 2.8vh;
-  }
-
-  .home h2 {
-    font-size: 2vh;
-  }
-
-  .home button {
-    font-size: 1.8vh;
-    padding: 10px 22px;
-  }
-
-  .about-body {
-    padding: 25px;
-  }
+    text-align: center;
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
 }
 
-/* Small Phones */
-@media (max-width: 480px) {
-  nav {
+.about-body img {
+    height: 400px;
+    border-radius: 30px;
+    border: 5px solid red;
+}
+
+.about-text {
+    text-align: center;
+    max-width: 50%;
+}
+
+.about-text h2 {
+    font-size: 4vh;
+    color: red;
+    text-transform: capitalize;
+    animation: hazel 2s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+@keyframes hazel {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-22px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about-text p {
+    font-size: 2vh;
+    color: white;
+    text-transform: capitalize;
+}
+
+.skills {
+    padding: 80px;
+}
+
+.skills h1 {
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 5vh;
+}
+
+.skill-body {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+}
+
+.skill-body h2 {
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+table {
+    margin-top: 50px;
+    width: 100%;
+    border: 5px solid red;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th, td {
+    padding: 30px;
+    color: white;
+    text-transform: uppercase;
+}
+
+th i {
+    color: red;
+    font-size: 4vh;
+}
+
+.project {
+    padding: 80px;
+}
+
+.project h1 {
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 4vh;
+}
+
+.project-body {
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.activity {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px;
+}
+
+.project-body h2 {
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.activity-1 {
+    background-color: white;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.activity-1:hover {
+    background-color: red;
+}
+
+.activity img {
+    height: 200px;
+}
+
+.activity h3 {
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.testi {
+    padding: 80px;
+}
+
+.testi h1 {
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 4vh;
+}
+
+.testi-body {
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.testi-body h2 {
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3vh;
+}
+
+.commentors {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.people-1 {
+    display: flex;
+    background-color: white;
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+.people-1:hover {
+    border: 3px solid red;
+}
+
+.people-1 img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+.comments {
+    margin-left: 2vh;
+}
+
+.people-1 h3 {
+    text-transform: capitalize;
+    color: red;
+}
+
+.people-1 p {
+    color: black;
+    text-transform: capitalize;
+}
+
+.cta {
+    padding: 80px;
+}
+
+.cta h1 {
+    color: red;
+    text-transform: uppercase;
+    text-align: start;
+    font-size: 4vh;
+}
+
+.cta-body {
+    padding: 30px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.cta-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cta-body h2 {
+    color: white;
+    background-color: red;
+    max-width: 30%;
+    padding: 20px;
+    border-radius: 100px;
+}
+
+.cta-text p {
+    color: white;
+    font-size: 2vh;
+    margin-left: 20px;
+}
+
+.footer-1 {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.footer-1 a {
+    color: pink;
+    font-size: 4vh;
+}
+
+.footer-1 p {
+    margin-left: 10px;
+}
+
+.logo-2 {
+    font-size: 5vh;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.logo-2 span {
+    color: aqua;
+    margin-left: 3vh;
+}
+
+.copy-right p {
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
     padding: 8px;
-  }
+}
 
-  .logo {
-    font-size: 2.6vh;
-  }
 
-  .home img {
-    width: 120px;
-    height: 120px;
-  }
+@media screen and (max-width: 768px) {
+    .home-body, .about-body, .activity, .cta-footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .home-body img, .about-body img {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    
+    .commentors {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
-  .home h1 {
-    font-size: 2.5vh;
-  }
+    .about-text {
+        max-width: 100%;
+    }
 
-  .home h2 {
-    font-size: 1.8vh;
-  }
+    nav {
+        flex-direction: column;
+    }
 
-  .about-body p {
-    font-size: 1.9vh;
-  }
+    .link-1 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-  .copy-right p {
-    font-size: 1.7vh;
-  }
+    .link-1 a {
+        margin: 10px;
+    }
 }
