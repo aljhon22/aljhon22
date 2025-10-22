@@ -60,7 +60,7 @@ nav {
 }
 
 .link-1 a:hover {
-    color: red;
+    color: yellow;
 }
 
 /* Sections General */
@@ -70,7 +70,7 @@ section {
 }
 
 section h1 {
-    color: red;
+    color: yellow;
     text-transform: uppercase;
     font-size: clamp(2rem, 6vw, 3.5rem);
     margin-bottom: 3rem;
@@ -107,7 +107,7 @@ section h1 {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    border: 5px solid red;
+    border: 5px solid yellow;
     object-fit: cover;
 }
 
@@ -118,7 +118,7 @@ section h1 {
 
 .home-text h2 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    color: red;
+    color: yellow;
     text-transform: capitalize;
     margin-bottom: 1rem;
 }
@@ -145,7 +145,7 @@ section h1 {
 }
 
 .my-social a {
-    color: red;
+    color: yellow;
     background-color: white;
     font-size: clamp(1.2rem, 3vw, 1.5rem);
     padding: 1rem;
@@ -186,7 +186,7 @@ section h1 {
     max-height: 400px;
     height: auto;
     border-radius: 30px;
-    border: 5px solid red;
+    border: 5px solid yellow;
     object-fit: cover;
 }
 
@@ -197,7 +197,7 @@ section h1 {
 
 .about-text h2 {
     font-size: clamp(1.8rem, 5vw, 2.5rem);
-    color: red;
+    color: yellow;
     text-transform: capitalize;
     animation: hazel 2s ease-in-out infinite;
     animation-delay: 2s;
@@ -235,7 +235,7 @@ section h1 {
 
 table {
     width: 100%;
-    border: 5px solid red;
+    border: 5px solid yellow;
     border-collapse: collapse;
     text-align: center;
     margin-top: 2rem;
@@ -254,7 +254,7 @@ th {
 }
 
 th i {
-    color: red;
+    color: yellow;
     font-size: clamp(1.2rem, 4vw, 1.8rem);
 }
 
@@ -268,7 +268,7 @@ th i {
 }
 
 .project-body h2 {
-    color: red;
+    color: yellow;
     text-transform: uppercase;
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 2rem);
@@ -291,16 +291,16 @@ th i {
 }
 
 .activity-1:hover {
-    background-color: red;
+    background-color: yellow;
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(255, 0, 0, 0.3);
 }
 
 .activity img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 30px;
     margin-bottom: 1rem;
 }
 
@@ -320,7 +320,7 @@ th i {
 }
 
 .testi-body h2 {
-    color: red;
+    color: yellow;
     text-transform: uppercase;
     text-align: center;
     font-size: clamp(1.5rem, 4vw, 2rem);
@@ -344,7 +344,7 @@ th i {
 }
 
 .people-1:hover {
-    border: 3px solid red;
+    border: 3px solid yellow;
     transform: translateY(-5px);
 }
 
@@ -362,7 +362,7 @@ th i {
 
 .people-1 h3 {
     text-transform: capitalize;
-    color: red;
+    color: yellow;
     margin: 0 0 0.5rem 0;
     font-size: 1.1rem;
 }
@@ -393,7 +393,7 @@ th i {
 
 .cta-body h2 {
     color: white;
-    background-color: red;
+    background-color: yellow;
     padding: clamp(1rem, 4vw, 1.5rem) clamp(2rem, 6vw, 3rem);
     border-radius: 100px;
     font-size: clamp(1.2rem, 4vw, 1.8rem);
@@ -433,7 +433,7 @@ th i {
 }
 
 .copy-right p {
-    background-color: red;
+    background-color: burlywood;
     color: white;
     text-align: center;
     text-transform: capitalize;
